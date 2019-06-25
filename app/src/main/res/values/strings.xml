@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_lista_usuarios">Cadastro Usuário</string>
     <string name="title_activity_lista_usuario">Lista Usuário</string>
+    <string name="title_activity_local_de_arrecadacao">Map</string>
 </resources>
