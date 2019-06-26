@@ -50,19 +50,27 @@ public class FormularioAgasalho extends AppCompatActivity {
 
         }
 
-        bt_cadastrar.setOnClickListener(new View.OnClickListener() {
+
+
+        bt_cadastrar.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 usuario.setNome(editText_nome.getText().toString());
                 usuario.setEndereco(editText_endereco.getText().toString());
                 usuario.setTelefone(Integer.parseInt(editText_telefone.getText().toString()));
+                Intent intent = new Intent(FormularioAgasalho.this, ListaUsuarios.class);
+                startActivity(intent);
 
                 if(bt_cadastrar.getText().toString().equals("Cadastrar")){
                     bdHelper.salvarUsuario(usuario);
                     bdHelper.close();
+
+                    startActivity(intent);
                 }else{
                     bdHelper.alterarUsuario(usuario);
                     bdHelper.close();
+
+                    startActivity(intent);
                 }
 
             }
