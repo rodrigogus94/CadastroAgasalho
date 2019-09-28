@@ -40,8 +40,12 @@ public class LocalDeArrecadacao extends FragmentActivity implements OnMapReadyCa
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+
+        LatLng sydney = new LatLng(-8.88483237, -36.49650687);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("UPE"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-8.88483237,-36.49650687), 15));
+
+
     }
 }
